@@ -1,15 +1,15 @@
 %define upstream_name    Data-Peek
-%define upstream_version 0.31
+%define upstream_version 0.39
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:    A collection of low-level debug facilities
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tgz
+Source0:    http://www.cpan.org/modules/by-module/Data/Data-Peek-%{upstream_version}.tgz
 
 BuildRequires: perl(Data::Dumper)
 BuildRequires: perl(DynaLoader)
@@ -17,7 +17,6 @@ BuildRequires: perl(Test::Harness)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::NoWarnings)
 BuildRequires: perl-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Data::Peek started off as 'DDumper' being a wrapper module over the
@@ -45,14 +44,11 @@ yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc META.yml ChangeLog README
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -80,3 +76,4 @@ rm -rf %buildroot
 
 * Tue Mar 16 2010 cpan2dist 0.31-1mdv
 - initial mdv release, generated with cpan2dist
+
