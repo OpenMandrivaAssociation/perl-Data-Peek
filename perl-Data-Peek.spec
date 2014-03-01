@@ -1,5 +1,4 @@
-%define upstream_name    Data-Peek
-%define upstream_version 0.39
+%define upstream_name    Data-Peek%define upstream_version 0.40
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +8,7 @@ Summary:    A collection of low-level debug facilities
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Data/Data-Peek-%{upstream_version}.tgz
+Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tgz
 
 BuildRequires: perl(Data::Dumper)
 BuildRequires: perl(DynaLoader)
@@ -76,4 +75,5 @@ yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
 
 * Tue Mar 16 2010 cpan2dist 0.31-1mdv
 - initial mdv release, generated with cpan2dist
+
 
