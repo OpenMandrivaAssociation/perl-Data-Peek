@@ -10,6 +10,7 @@ Group:      Development/Perl
 Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tgz
 
+BuildRequires:	make
 BuildRequires: perl(Data::Dumper)
 BuildRequires: perl(DynaLoader)
 BuildRequires: perl(Test::Harness)
