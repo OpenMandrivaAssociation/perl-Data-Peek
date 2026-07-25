@@ -1,14 +1,15 @@
-%define upstream_name    Data-Peek%define upstream_version 0.40
+%define upstream_name    Data-Peek
+%define upstream_version 0.54
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    A collection of low-level debug facilities
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tgz
+Url:        https://github.com/Tux/Data-Peek
+Source0:    https://cpan.metacpan.org/authors/id/H/HM/HMBRAND/Data-Peek-0.54.tgz-%{upstream_version}.tgz
 
 BuildRequires:	make
 BuildRequires: perl(Data::Dumper)
